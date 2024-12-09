@@ -16,8 +16,9 @@ services:
     stop_grace_period: "1m"
     volumes:
       # - "${APP_DATA_DIR}/originals:/photoprism/originals"
-      - "/home/umbrel/umbrel/app-data/nextcloud/data/nextcloud/data/aproske/files/Photos:/photoprism/originals"
-      - "${APP_DATA_DIR}/storage:/photoprism/storage"
+      - "/home/umbrel/umbrel/app-data/nextcloud/data/photos/originals:/photoprism/originals"
+      # - "${APP_DATA_DIR}/storage:/photoprism/storage"
+      - "/home/umbrel/umbrel/app-data/nextcloud/data/photos/storage:/photoprism/storage"
     environment:
       PHOTOPRISM_ADMIN_PASSWORD: "${APP_PASSWORD}"
       PHOTOPRISM_ORIGINALS_LIMIT: 10000
